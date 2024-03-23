@@ -1,5 +1,6 @@
-module CAGE
+module CAGE;
 
-# Write your package code here.
+include("basis1d.jl");
+export bspline_recursive1d, bspline_basis_1d
 
 end
