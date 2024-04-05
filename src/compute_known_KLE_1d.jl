@@ -1,4 +1,3 @@
-using LinearAlgebra, Distances;
 
 function compute_known_KLE_1d(x, C, B)
     N_terms = size(B, 2);

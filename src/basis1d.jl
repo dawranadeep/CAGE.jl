@@ -1,4 +1,3 @@
-using Base.Threads, Polynomials, Distances
 
 
 ###################### B-splines #########################

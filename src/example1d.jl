@@ -1,5 +1,5 @@
 include("/Users/dawr2/Desktop/Ranadeep_Daw_Projects/mvcage/github/CAGE/src/CAGE.jl");
-using .CAGE, Plots
+using .CAGE, Plots, Distances
 using Trapz, LinearAlgebra;
 
 x = range(0, 1, 1000) |> collect;
@@ -28,13 +28,6 @@ end
 
 
 
-W2 = zeros(size(Q,2), size(Q,2));
-for j in 1:size(Q,2)
-    for k in j:size(Q,2)
-        W2[j,k] = trapz(x, psi[:, j] .* psi[:, k]);
-        W2[k,j] = W2[j, k];
-    end
-end
 
 
 
@@ -43,6 +36,15 @@ end
 
 C = exp.( -pairwise(Euclidean(), x, x)/5);
 (psi, ee) = compute_known_KLE_1d(x, C, Q);
+
+
+W2 = zeros(size(Q,2), size(Q,2));
+for j in 1:size(Q,2)
+    for k in j:size(Q,2)
+        W2[j,k] = trapz(x, psi[:, j] .* psi[:, k]);
+        W2[k,j] = W2[j, k];
+    end
+end
 
 p = plot(x, psi[:,1], legend = false);
 for i in 2:size(psi,2)

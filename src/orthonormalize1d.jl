@@ -1,4 +1,3 @@
-using Base.Threads, Trapz, LinearAlgebra;
 
 
 function orthonormalize_basis_1d(x, B)   
