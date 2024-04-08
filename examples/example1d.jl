@@ -27,9 +27,16 @@ for i in 2:size(Q,2)
 end
 
 
+W2 = zeros(size(Q,2), size(Q,2));
+for j in 1:size(Q,2)
+    for k in j:size(Q,2)
+        W2[j,k] = trapz(x, Q[:, j] .* Q[:, k]);
+        W2[k,j] = W2[j, k];
+    end
+end
 
 
-
+round.(W2, digits=4)
 
 ########        Test KLE ##########
 

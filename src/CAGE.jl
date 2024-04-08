@@ -13,4 +13,12 @@ export orthonormalize_basis_1d;
 
 include("compute_known_KLE_1d.jl");
 export compute_known_KLE_1d;
+
+
+#include("basis2d.jl");
+#export bspline_basis_2d;
+
+include("compute_known_MKLE_1d.jl");
+export compute_known_MKLE_1d;
+
 end
