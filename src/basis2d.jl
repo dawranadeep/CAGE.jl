@@ -25,12 +25,17 @@ end
 
 ###################### Exponential #########################
 # exp( - distance/lengthscale)
-function exponential_basis_1d(X, lengthscale, knots)
+function exponential_basis_2d(X, lengthscale, knots)
     
     if ndims(lengthscale) == 0
-        B = exp.( - pairwise(Euclidean(), X, knots) ./ lengthscale);
-        B = [ones(length(x), 1) B];
+        B = exp.(- sqrt.(pairwise(Euclidean(), X[:,1], knots[:,1]).^2 + pairwise(Euclidean(), X[:,2], knots[:,2]).^2)./ lengthscale);  
+        B = [ones(size(X,1), 1) B];
+    else
+        ### mistake
+        B = exp.(- pairwise(Euclidean(), X[:,1], knots[:,1])./ lengthscale[1] + pairwise(Euclidean(), X[:,2], knots[:,2])./ lengthscale[2]);
+        B = [ones(length(X), 1) B];
     end
+
     return B
 end
 
