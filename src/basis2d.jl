@@ -55,3 +55,16 @@ end
 
 
 
+###################### Gaussian #########################
+# exp( - distance^2/(2*lengthscale^2))
+
+function gaussian_basis_1d(x, lengthscale, knots)
+    D =     pairwise(Euclidean(), x, knots);
+    B = exp.( -  ./ (2*lengthscale^2) );
+    B = [ones(length(x), 1) B];
+    return B
+end
+
+
+
+
