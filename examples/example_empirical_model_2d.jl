@@ -45,8 +45,8 @@ C12_hat = cov(Y1', Y2');
 
 
 ## Sample pseudo x and y
-px = range(0, 1, 100) |> collect;
-py = range(0, 1, 200) |> collect;
+px = range(0, 1, 101) |> collect;
+py = range(0, 1, 201) |> collect;
 (xx, yy) = ndgrid(px, py);
 pX = [xx[:] yy[:]];
 lengthscale = 0.1;
