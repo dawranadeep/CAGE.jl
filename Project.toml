@@ -1,20 +1,6 @@
-name = "CAGE"
-uuid = "6123d233-acec-4f8d-9a74-aa94b458fbf9"
-authors = ["Ranadeep Daw"]
-version = "1.0.0-DEV"
-
 [deps]
-Distances = "0.10.11"
-LazyGrids = "0.5.0"
-LinearAlgebra = "0.5.0"
-Polynomials = "4.0.6"
-Trapz = "2.0.3"
-
-[compat]
-julia = "1"
-
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
+Distances = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
+LazyGrids = "7031d0ef-c40d-4431-b2f8-61a8d2f650db"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
+Trapz = "592b5752-818d-11e9-1e9a-2b8ca4a44cd1"

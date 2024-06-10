@@ -1,4 +1,5 @@
-include("/Users/dawr2/Desktop/Ranadeep_Daw_Projects/mvcage/github/CAGE/src/CAGE.jl");
+#include("/Users/dawr2/Desktop/Ranadeep_Daw_Projects/mvcage/github/CAGE/src/CAGE.jl");
+include("F:/Now/CAGE.jl/src/CAGE.jl");
 using .CAGE, Test
 
 ############ Test bspline ###########
