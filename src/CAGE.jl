@@ -15,8 +15,8 @@ include("compute_known_KLE_1d.jl");
 export compute_known_KLE_1d;
 
 
-#include("basis2d.jl");
-#export bspline_basis_2d;
+include("basis2d.jl");
+export exponential_basis_2d, Gaussian_basis_2d, Wendland_basis_2d, generate_basis_2d;
 
 include("compute_known_MKLE_1d.jl");
 export compute_known_MKLE_1d;
